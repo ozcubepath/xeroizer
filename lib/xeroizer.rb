@@ -15,13 +15,15 @@ require 'cgi'
 $: << File.expand_path(File.dirname(__FILE__))
 
 require 'class_level_inheritable_attributes'
+require 'xeroizer/exceptions'
 require 'xeroizer/oauth'
 require 'xeroizer/http_encoding_helper'
 require 'xeroizer/http'
-require 'xeroizer/exceptions'
 
 require 'xeroizer/record/base_model'
+require 'xeroizer/record/payroll_base_model'
 require 'xeroizer/record/base'
+require 'xeroizer/record/payroll_base'
 require 'xeroizer/configuration'
 
 # Include models
@@ -50,6 +52,7 @@ require 'xeroizer/models/option'
 require 'xeroizer/models/organisation'
 require 'xeroizer/models/payment'
 require 'xeroizer/models/prepayment'
+require 'xeroizer/models/overpayment'
 require 'xeroizer/models/phone'
 require 'xeroizer/models/purchase_order'
 require 'xeroizer/models/receipt'
@@ -64,6 +67,10 @@ require 'xeroizer/models/journal_line_tracking_category'
 require 'xeroizer/models/contact_sales_tracking_category'
 require 'xeroizer/models/contact_purchases_tracking_category'
 
+require 'xeroizer/models/payroll/home_address'
+require 'xeroizer/models/payroll/bank_account'
+require 'xeroizer/models/payroll/employee'
+
 require 'xeroizer/report/factory'
 
 require 'xeroizer/response'
@@ -72,3 +79,4 @@ require 'xeroizer/generic_application'
 require 'xeroizer/public_application'
 require 'xeroizer/private_application'
 require 'xeroizer/partner_application'
+require 'xeroizer/payroll_application'
