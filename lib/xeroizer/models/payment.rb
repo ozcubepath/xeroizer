@@ -25,7 +25,7 @@ module Xeroizer
       belongs_to    :account
       belongs_to    :invoice
       belongs_to    :credit_note
-      belongs_to    :overpayment
+      # belongs_to    :overpayment  #Base on the XML, the Overpayment XML is represented as Invoice XML. Not ure why.
 
       def invoice_id
         invoice.id if invoice
