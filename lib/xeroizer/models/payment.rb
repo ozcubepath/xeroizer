@@ -25,6 +25,7 @@ module Xeroizer
       belongs_to    :account
       belongs_to    :invoice
       belongs_to    :credit_note
+      belongs_to    :overpayment
 
       def invoice_id
         invoice.id if invoice
